@@ -1,0 +1,12 @@
+{
+	"manifest_version": 3,
+
+	"name": "ChatGPT Gmail Bot",
+	"description": "This Chrome Extension to connect ChatGPT with gmail, and write reply email for incoming emails",
+	"version": "1.0.0",
+	"author": "Raghav Rathi",
+
+	"action": {
+		"default_popup": "index.html"
+	}
+}
