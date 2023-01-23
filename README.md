@@ -1,6 +1,6 @@
-# ChatGPT Gmail Bot
+# 📊: ChatGPT Gmail Bot
 
-```md
+```
 - Chrome Extension
 - which connect ChatGPT with Gmail
 - and write reply email for incoming emails
