@@ -1,5 +1,5 @@
 window.onload = function () {
-	console.log("ChatGPT Gmail Bot .. Loaded Successfully");
+	console.log("gmail-script.js ... Loaded Successfully");
 
 	window.onhashchange = function () {
 		if (window.location.hash.startsWith("#inbox/")) {
@@ -10,7 +10,16 @@ window.onload = function () {
 				console.log("Clicked Reply Button !!!");
 
 				const email = document.querySelector(".adn.ads");
-				console.log(email.textContent);
+				const content = {
+					email_content: email.textContent,
+					email_id: window.location.hash,
+				};
+
+				// send to service worker ... background.js
+				(async function () {
+					// chrome.runtime.sendMessage(content);
+					chrome.runtime.sendMessage(content);
+				})();
 			});
 		}
 	};

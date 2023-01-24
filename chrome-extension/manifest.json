@@ -3,7 +3,7 @@
 
 	"name": "ChatGPT Gmail Bot",
 	"description": "Chrome Extension to connect ChatGPT with gmail, and write reply email for incoming emails",
-	"version": "1.0.0",
+	"version": "0.4",
 	"author": "Raghav Rathi",
 
 	"action": {
@@ -14,10 +14,19 @@
 		{
 			"matches": ["https://mail.google.com/*"],
 			"js": ["gmail-script.js"]
+		},
+		{
+			"matches": ["https://chat.openai.com/*"],
+			"js": ["gpt-script.js"]
 		}
 	],
 
 	"host_permissions": [
-		"https://mail.google.com/*"
-	]
+		"https://mail.google.com/*",
+		"https://chat.openai.com/*"
+	],
+
+	"background": {
+		"service_worker": "background.js"
+	}
 }
