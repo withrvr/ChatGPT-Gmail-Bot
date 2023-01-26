@@ -1,26 +1,39 @@
 window.onload = function () {
 	console.log("gmail-script.js ... Loaded Successfully");
 
+	// when email is opened
 	window.onhashchange = function () {
 		if (window.location.hash.startsWith("#inbox/")) {
 			console.log("Opened Email:- " + window.location.hash);
 
-			const reply_btn = document.querySelector(".ams.bkH");
-			reply_btn.addEventListener("click", function () {
-				console.log("Clicked Reply Button !!!");
+			// click on reply button
+			for (const span of document.querySelectorAll("span[role=link]")) {
+				// const reply_btn = document.querySelector(".ams.bkH");
+				if (span.innerText === "Reply") {
+					span.addEventListener("click", function () {
+						console.log("Clicked Reply Button !!!");
 
-				const email = document.querySelector(".adn.ads");
-				const content = {
-					email_content: email.textContent,
-					email_id: window.location.hash,
-				};
+						const content = {
+							email_id: window.location.hash,
+							email_title:
+								document.querySelector(".hP.mt-thread")
+									.innerText,
+							email_content:
+								document.querySelector(".adn.ads").textContent,
+						};
+						// service worker ... send / receive
+						(async function () {
+							const gptResponse =
+								await chrome.runtime.sendMessage(content);
 
-				// send to service worker ... background.js
-				(async function () {
-					// chrome.runtime.sendMessage(content);
-					chrome.runtime.sendMessage(content);
-				})();
-			});
+							const gmailTextBox =
+								document.querySelector("[role=textbox]");
+
+							gmailTextBox.innerText = gptResponse.reply_msg;
+						})();
+					});
+				}
+			}
 		}
 	};
 };
