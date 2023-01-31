@@ -1,15 +1,38 @@
-# 📊: ChatGPT Gmail Bot
 
-```
-- Chrome Extension
-- which connect ChatGPT with Gmail
-- and write reply email for incoming emails
-```
+<p align="center">
+  <a href="#" target="_blank">
+    <img src="./chrome-extension/logo.png" alt="logo" width="200">
+  </a>
+</p>
 
-- [Screenshots of this project](./screenshots/)
+<h3 align="center"> <b>ChatGPT Gmail Bot</b> </h3>
 
-# 📽️: Udemy
+<div align="center">
+  <p> Chrome Extension to connect ChatGPT with gmail, <br> and write reply email for incoming emails </p>
 
+<a href="https://github.com/withrvr/ChatGPT-Gmail-Bot/issues/new?template=bug_report.md" target="_blank">Report Bug</a>
+|
+<a href="https://github.com/withrvr/ChatGPT-Gmail-Bot/issues/new?template=feature_request.md" target="_blank">Request Feature</a>
+|
+<a href="https://github.com/withrvr/ChatGPT-Gmail-Bot/discussions" target="_blank">Discussions</a>
+
+</div>
+
+<!-- <h3 align="center">
+   <a href="./screenshots/" target="_blank"><b>Screenshots of this project</b></a>
+</h3> -->
+
+# 📸: Screenshots of this projects
+
+- How to run the project ... [Developer_Guide.md](./Developer_Guide.md)
+- for more photos visit [/screenshots](./screenshots/) folder
+
+![output-1](./screenshots/output-1.png)
+
+# 🔗: Links
+
+- [Official Chrome Extension Docs](https://developer.chrome.com/docs/extensions/)
+<!-- - Deployed extension link here -->
 - Course :- https://www.udemy.com/course/chatgpt-bot/
 - Certificate :- https://www.udemy.com/certificate/UC-b46816a7-81f0-462e-8ebd-a11c5662701f/
 
