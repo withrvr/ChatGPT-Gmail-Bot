@@ -27,7 +27,8 @@
 - How to run the project ... [Developer_Guide.md](./Developer_Guide.md)
 - for more photos visit [/screenshots](./screenshots/) folder
 
-![output-1](./screenshots/output-1.png)
+<!-- ![output-1](./screenshots/output-1.png) -->
+![output-3](./screenshots/output-3.png)
 
 # 🔗: Links
 
