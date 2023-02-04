@@ -16,8 +16,7 @@ window.onload = function () {
 						const content = {
 							email_id: window.location.hash,
 							email_title:
-								document.querySelector(".hP.mt-thread")
-									.innerText,
+								document.querySelector("h2.hP").innerText,
 							email_content:
 								document.querySelector(".adn.ads").textContent,
 						};
